@@ -1,0 +1,123 @@
+<!-- Joshua Geiter -->
+<!-- V 1.0 : Updated 12/12/2021 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            UAT Space Program
+        </title>
+        <style>
+            h1{
+                text-align: center;
+                font-size: 30px;
+                margin-top: 0px;
+            }
+            h2{
+                text-align: center;
+                font-size: 30px;
+                margin-top: 0px;
+            }
+            .container{
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+            button{
+                border-radius: 12px;
+                width: 100px;
+                background-color: #e63b3b;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                -webkit-transition-duration: 0.4s;
+                transition-duration: 0.4s;
+            }
+            button:hover{
+                box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+            }
+            .graph th,.graph td {
+                border:1px solid black;
+                width: 45%;
+            }
+            .nav{
+                text-align: center;
+                background: linear-gradient(150deg, #6A9F9C, #C378D1);
+                border-style: solid;
+                border-width: 3px;
+                border-radius: 60px;
+                margin-left: 300px;
+                margin-right: 300px;
+                padding: 5px;
+            }
+        </style>
+       <script src="CountDown.js"></script>
+    </head>
+    <body style="background: linear-gradient(90deg, white, #e63b3b);">
+        <h1>
+            Count Down Till Launch:
+        </h1>
+        <h2 id="timer"></h2>
+        <div class="nav">
+            <a href="Boards Page.html">Boards Page</a>
+            <a href="Index.html">Homepage</a>
+        </div>
+        <table>
+            <tbody>
+                <tr>
+                    <td><img src="UAT Space Program.PNG" alt="UAT Space Logo"></td>
+                    <td><h2>UAT Space Program</h2></td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="graph">
+            <tr>
+              <th>Data Type</th>
+              <th>Reading</th>
+            </tr>
+            <tr><td>Seconds:</td> <td>15</td></tr>
+            <tr><td>Latitude:</td> <td>0</td></tr>
+            <tr><td>Longitute:</td> <td>0</td></tr>
+            <tr><td>GPS Altitude:</td> <td>0</td></tr>
+            <tr><td>BMP Sensor Altitute:</td> <td>30383.04</td></tr>
+            <tr><td>BMP Sensor Pressure:</td> <td>2.34</td></tr>
+            <tr><td>BMP Sensor Temp.:</td> <td>0</td></tr>
+            <tr><td>Digital Sensor Temp.:</td> <td>24.12</td></tr>
+            <tr><td>CSS Sensor Temp.:</td> <td>25</td></tr>
+            <tr><td>CSS Sensor eCO2:</td> <td>400</td></tr>
+            <tr><td>CSS Sensor TVOC:</td> <td>0</td></tr>
+            <tr><td>UV:</td> <td>0</td></tr>
+            <tr><td>Accel X:</td> <td>-0.87</td></tr>
+            <tr><td>Accel Y:</td> <td>-.02</td></tr>
+            <tr><td>Accel Z:</td> <td>9.61</td></tr>
+            <tr><td>Magnetic X:</td> <td>0.13</td></tr>
+            <tr><td>Magnetic Y:</td> <td>0.57</td></tr>
+            <tr><td>Magnetic Z:</td> <td>-0.24</td></tr>
+            <tr><td>Gyro X:</td> <td>4.66</td></tr>
+            <tr><td>Gyro Y:</td> <td>0.01</td></tr>
+            <tr><td>Gyro Z:</td> <td>-0.4</td></tr>
+          </table>
+        <div class="container">
+            <button id="startButton" type="button">Start</button>
+            <button id="stopButton" type="button">Stop</button>
+        </div>
+        
+        <script>
+            //window.onload = login();
+            var alertButton1 = document.getElementById("startButton");
+            alertButton1.addEventListener("click", function(event) {
+                CountDown();
+                document.getElementById("BG").play();
+            });
+        </script>
+    </body>
+</html>
